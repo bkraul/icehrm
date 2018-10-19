@@ -13,7 +13,7 @@ use Classes\BaseService;
 use Classes\IceResponse;
 use Classes\SubActionManager;
 use Dependents\Common\Model\EmployeeDependent;
-use Documents\Common\Model\EmployeeDocument;
+#use Documents\Common\Model\EmployeeDocument;
 use EmergencyContacts\Common\Model\EmergencyContact;
 use Employees\Common\Model\ArchivedEmployee;
 use Employees\Common\Model\Employee;
@@ -115,7 +115,7 @@ class EmployeesActionManager extends SubActionManager
         $data->timesheets = $this->getEmployeeData($employee->id, new EmployeeTimeSheet());
         $data->timesheetEntries = $this->getEmployeeData($employee->id, new EmployeeTimeEntry());
         $data->attendance = $this->getEmployeeData($employee->id, new Attendance());
-        $data->documents = $this->getEmployeeData($employee->id, new EmployeeDocument());
+        #$data->documents = $this->getEmployeeData($employee->id, new EmployeeDocument());
         $data->travelRecords = $this->getEmployeeData($employee->id, new EmployeeTravelRecord());
         $data->qualificationSkills = $this->getEmployeeData($employee->id, new EmployeeSkill());
         $data->qualificationEducation = $this->getEmployeeData($employee->id, new EmployeeEducation());
